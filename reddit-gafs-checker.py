@@ -135,7 +135,7 @@ async def check_reddit_loop():
     try:
         subreddit = await reddit.subreddit(SUBREDDIT_NAME)
         logging.debug(f"Checking subreddit: {SUBREDDIT_NAME}")
-        async for submission in subreddit.new(limit=10):  # Check the latest 10 posts
+        async for submission in subreddit.new(limit=2):  # Check the latest 2 posts
             logging.debug(f"Examining post: {submission.title}")
             if any(keyword.lower() in submission.title.lower() for keyword in KEYWORDS):
                 logging.info(f"Keyword match found: {submission.title}")
