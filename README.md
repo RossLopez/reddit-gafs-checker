@@ -46,7 +46,7 @@ DISCORD_BOT_TOKEN=your_discord_bot_token
     After configuring the .env file, you can run the bot using:
 
 ```bash
-python3 bot.py
+python3 reddit-gafs-checker.py
 ```
 
 ## Commands
